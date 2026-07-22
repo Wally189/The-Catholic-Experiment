@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="The Catholic Experiment: a governed programme of disciplined Catholic learning experiments using older source texts, current authoritative checks and honest public evaluation.">
+  <title>The Catholic Experiment</title>
+  <style>
+    :root{--ink:#190806;--burgundy:#8e1730;--gold:#d6a43a;--paper:#fff;--ground:#f2e5da;--muted:#756c67;--line:#e4dcd6}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;padding:2vw;background:var(--ground);font:15px/1.6 Arial,sans-serif;color:var(--ink)}
+    a{color:inherit}
+    .app{min-height:96vh;border:10px solid var(--ink);border-radius:26px;background:var(--paper);display:grid;grid-template-columns:112px minmax(0,1fr);overflow:hidden}
+    .nav{background:var(--ink);color:#fff;padding:20px 8px;display:flex;flex-direction:column;position:sticky;top:0;height:96vh}
+    .logo{width:58px;height:58px;border-radius:50%;background:var(--gold);color:var(--ink);margin:0 auto 27px;display:grid;place-items:center;font:36px Georgia,serif}
+    .nav a{color:#aaa;text-decoration:none;text-align:center;padding:12px 3px;border-radius:12px;margin:3px 0;font-size:13px}
+    .nav a:hover,.nav a:focus-visible,.nav a.on{color:#fff;background:#35100e;box-shadow:inset 3px 0 var(--gold);outline:none}
+    main{min-width:0}
+    .view{padding:38px;min-height:82vh}
+    .hero{min-height:60vh;border-radius:20px;padding:8%;color:#fff;background:linear-gradient(120deg,var(--ink) 30%,var(--burgundy) 70%,var(--gold));display:flex;flex-direction:column;justify-content:center}
+    .hero small{font-weight:800;letter-spacing:.13em}
+    .hero h1{font:70px/1.05 Georgia,serif;margin:12px 0 16px;max-width:920px}
+    .hero p{max-width:800px;font-size:18px}
+    .button{display:inline-block;border-radius:30px;padding:12px 18px;background:var(--gold);color:var(--ink);font-weight:800;text-decoration:none}
+    h1,h2,h3{font-family:Georgia,serif}
+    h1{font-size:48px;line-height:1.1}
+    h2{font-size:31px}
+    .lede{max-width:920px;color:var(--muted);font-size:18px}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+    .card{border:1px solid var(--line);border-top:6px solid var(--accent,var(--burgundy));border-radius:16px;padding:21px;background:#fff;text-decoration:none}
+    .card:hover,.card:focus-visible{transform:translateY(-2px);box-shadow:0 9px 22px rgba(25,8,6,.09);outline:3px solid rgba(214,164,58,.4)}
+    .card p,.muted{color:var(--muted)}
+    .status{display:inline-block;padding:5px 10px;border-radius:99px;background:#f5ead0;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .notice{margin:24px 0;padding:18px;border-left:6px solid var(--gold);background:#fff7df;border-radius:0 14px 14px 0}
+    footer{padding:24px 38px 34px;color:var(--muted);border-top:1px solid var(--line)}
+    footer a{margin-right:18px}
+    [hidden]{display:none!important}
+    @media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.hero h1{font-size:54px}}
+    @media(max-width:760px){body{padding:0}.app{border-width:6px;border-radius:0;grid-template-columns:1fr}.nav{height:auto;position:sticky;z-index:10;top:0;flex-direction:row;overflow-x:auto;padding:7px}.logo{display:none}.nav a{min-width:92px;margin:0 2px}.view{padding:22px}.hero{min-height:65vh;padding:34px 24px}.hero h1{font-size:44px}.cards{grid-template-columns:1fr}footer{padding:22px}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="logo" aria-hidden="true">✠</div>
+    <a href="#home" data-view="home">⌂<br>Home</a>
+    <a href="#courses" data-view="courses">▤<br>Courses</a>
+    <a href="#schedule" data-view="schedule">◫<br>Schedule</a>
+    <a href="#materials" data-view="materials">▣<br>Materials</a>
+    <a href="#certificates" data-view="certificates">✦<br>Certificates</a>
+    <a href="#contact" data-view="contact">✉<br>Contact</a>
+  </nav>
+
+  <main id="main-content">
+    <section class="view" id="home" data-section>
+      <div class="hero">
+        <small>A LIFELONG PROGRAMME OF CATHOLIC LEARNING EXPERIMENTS</small>
+        <h1>Learn seriously. Test honestly. Share what works.</h1>
+        <p>The Catholic Experiment uses older books as learning spines, checks them against current authoritative sources, and records what an ordinary Catholic genuinely learns through disciplined study.</p>
+        <p><a class="button" href="#courses">Explore the courses →</a></p>
+      </div>
+      <div class="cards">
+        <a class="card" href="#courses"><span class="status">Current pilot</span><h2>Latin</h2><p>Ecclesiastical Latin through Father William Most’s natural method.</p></a>
+        <a class="card" style="--accent:#1c3f8f" href="#courses"><span class="status">Definition</span><h2>Faith</h2><p>A historically rooted course controlled by current Catholic authority.</p></a>
+        <a class="card" style="--accent:#2f6b50" href="#schedule"><span class="status">Programme</span><h2>Follow the journey</h2><p>See what is being studied, built, tested and evaluated next.</p></a>
+      </div>
+    </section>
+
+    <section class="view" id="courses" data-section hidden>
+      <h1>Courses</h1>
+      <p class="lede">Each course is an individual Experiment with one source spine, a defined learning question, active notebook work and a public evaluation.</p>
+      <div class="cards">
+        <a class="card" href="https://wally189.github.io/the-catholic-experiment/"><span class="status">Pilot</span><h2>The Latin Experiment</h2><p>Reading, handwriting, speaking, listening and reflection through a graded Ecclesiastical Latin course.</p></a>
+        <a class="card" style="--accent:#1c3f8f" href="https://wally189.github.io/The-Faith-Experiment/"><span class="status">In definition</span><h2>The Faith Experiment</h2><p>A governed Catholic formation course. The source edition and rights position remain under formal review.</p></a>
+        <article class="card" style="--accent:#6b2d70"><span class="status">Concept</span><h2>Future Experiments</h2><p>Bible, reason, history and other subjects remain at concept until the active pilot is evaluated.</p></article>
+      </div>
+    </section>
+
+    <section class="view" id="schedule" data-section hidden>
+      <h1>Schedule</h1>
+      <p class="lede">Only one Experiment is developed intensively at a time. The programme currently prioritises platform stabilisation, then the Latin pilot, before further Faith production.</p>
+      <div class="notice"><strong>Current sequence:</strong> common platform → Latin pilot definition → genuine study and delivery → evaluation → decision on the next intensive Experiment.</div>
+      <div class="cards">
+        <article class="card"><h2>Now</h2><p>Stabilise the common website architecture, navigation, accessibility and technical recovery process.</p></article>
+        <article class="card" style="--accent:#1c3f8f"><h2>Next</h2><p>Define and complete the smallest meaningful Latin pilot block.</p></article>
+        <article class="card" style="--accent:#2f6b50"><h2>Then</h2><p>Evaluate learning, usability, workload and the limited companion-media model.</p></article>
+      </div>
+    </section>
+
+    <section class="view" id="materials" data-section hidden>
+      <h1>Materials</h1>
+      <p class="lede">The book remains central. Website pages, notebooks, slide decks, transcripts and videos support study rather than replace it.</p>
+      <div class="cards">
+        <article class="card"><h2>Primary texts</h2><p>Older or historical source books used as the spine of each Experiment, with edition and rights checks recorded.</p></article>
+        <article class="card" style="--accent:#1c3f8f"><h2>Modern authorities</h2><p>Current Catholic, academic or technical sources used to validate, qualify or correct the historical spine.</p></article>
+        <article class="card" style="--accent:#2f6b50"><h2>Companion media</h2><p>Selected slide decks, transcripts and YouTube videos mapped to meaningful course blocks.</p></article>
+      </div>
+    </section>
+
+    <section class="view" id="certificates" data-section hidden>
+      <h1>Certificates</h1>
+      <p class="lede">Certificates mark evidenced learning milestones. They do not claim academic accreditation, ecclesiastical approval or professional qualification.</p>
+      <div class="notice"><strong>Principle:</strong> a certificate should reflect completed study, active work and an approved completion test—not simply viewing pages or videos.</div>
+      <div class="cards">
+        <article class="card"><h2>Course milestones</h2><p>Individual Experiments may define clearly labelled completion milestones.</p></article>
+        <article class="card" style="--accent:#1c3f8f"><h2>Evidence first</h2><p>Notebook work, recall, correction and review must support any completion claim.</p></article>
+        <article class="card" style="--accent:#2f6b50"><h2>Honest limits</h2><p>Every certificate must state what it does—and does not—represent.</p></article>
+      </div>
+    </section>
+
+    <section class="view" id="contact" data-section hidden>
+      <h1>Contact</h1>
+      <p class="lede">Corrections, source suggestions and thoughtful feedback are welcome. A shared contact route will be activated once the central deployment is verified.</p>
+      <div class="notice">For now, use the contact route within the relevant individual Experiment. Do not send sensitive personal information.</div>
+    </section>
+
+    <footer>
+      <p><strong>The Catholic Experiment</strong> is an independent learning project. It does not imply ecclesiastical approval.</p>
+      <p><a href="#materials">Sources and materials</a><a href="#contact">Corrections</a><a href="https://github.com/Wally189/The-Catholic-Experiment">Source repository</a></p>
+      <p>This is AI generated content and may need to be checked against Magnifica Humanae</p>
+    </footer>
+  </main>
+</div>
+<script>
+  const sections=[...document.querySelectorAll('[data-section]')];
+  const links=[...document.querySelectorAll('[data-view]')];
+  function show(id){
+    if(!sections.some(section=>section.id===id)) id='home';
+    sections.forEach(section=>section.hidden=section.id!==id);
+    links.forEach(link=>link.classList.toggle('on',link.dataset.view===id));
+    document.title=(id==='home'?'The Catholic Experiment':id[0].toUpperCase()+id.slice(1)+' · The Catholic Experiment');
+    window.scrollTo({top:0,behavior:'instant'});
+  }
+  function route(){show(location.hash.slice(1)||'home')}
+  window.addEventListener('hashchange',route);
+  route();
+</script>
+</body>
+</html>
