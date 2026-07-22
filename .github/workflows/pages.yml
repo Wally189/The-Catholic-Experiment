@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Apply common footer standards
+      - name: Apply common footer and certificate standards
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -36,14 +36,10 @@ jobs:
                       path.write_text(text.replace(old, new), encoding='utf-8')
           path = Path('index.html')
           text = path.read_text(encoding='utf-8')
-          text = text.replace(
-              'footer a{margin-right:18px}',
-              'footer a{margin-right:18px}.footer-brand{float:right;margin-right:0;font-weight:700;text-decoration:none}@media(max-width:760px){.footer-brand{float:none;display:block;margin-top:14px}}'
-          )
-          text = text.replace(
-              '<p class="version">Central site version 0.4 · reviewed 22 July 2026</p>',
-              '<p class="version">Central site version 0.4 · reviewed 22 July 2026 <a class="footer-brand" href="https://www.waylight-atlantic.co.uk/" target="_blank" rel="noopener">Waylight Atlantic →</a></p>'
-          )
+          text = text.replace('View the indicative milestones and the developing A1 pathway on the Latin site.','View learner-recorded course milestones on the Latin site. These are not assessed qualifications or language-level awards.')
+          text = text.replace('See the proposed completion framework for this course.','Certificate framework not yet released.')
+          text = text.replace('footer a{margin-right:18px}','footer a{margin-right:18px}.footer-brand{float:right;margin-right:0;font-weight:700;text-decoration:none}@media(max-width:760px){.footer-brand{float:none;display:block;margin-top:14px}}')
+          text = text.replace('<p class="version">Central site version 0.4 · reviewed 22 July 2026</p>','<p class="version">Central site version 0.4 · reviewed 22 July 2026 <a class="footer-brand" href="https://www.waylight-atlantic.co.uk/" target="_blank" rel="noopener">Waylight Atlantic →</a></p>')
           path.write_text(text, encoding='utf-8')
           PY
       - name: Configure Pages
