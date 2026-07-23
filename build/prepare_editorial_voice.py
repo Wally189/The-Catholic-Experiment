@@ -56,20 +56,14 @@ journal = '''<section class="view" id="journal" data-section hidden>
 
 videos = '''<section class="view" id="videos" data-section hidden>
 <h1>Videos</h1>
-<p class="lede">Each video begins with one narrow question. The aim is to show the work, explain the method and admit where the answer is not yet tidy—not to replace the books, lessons or handwritten study.</p>
-<div class="notice"><strong>Illustrative placeholders:</strong> these titles show the intended question-led format. They can be linked to the finished videos as they are published.</div>
-<h2>The Latin Experiment · first five lessons</h2>
+<p class="lede">The videos are occasional milestones rather than a second version of every lesson. They introduce the project, show the real work and reflect honestly on what changed over a meaningful stretch of study.</p>
+<div class="notice"><strong>Planned format:</strong> one welcome video for The Catholic Experiment, followed by reflective course videos at sensible intervals. The welcome slide deck and spoken introduction will be developed separately.</div>
 <div class="media-list">
-<article class="media-card" style="--accent:var(--burgundy)"><span class="status planned">Lesson 1</span><h2>Why begin Latin by reading aloud?</h2><p>What pronunciation reveals, why the mouth matters to memory, and what feels unexpectedly difficult at the beginning.</p></article>
-<article class="media-card" style="--accent:var(--burgundy)"><span class="status planned">Lesson 2</span><h2>What can a tiny Latin story teach before grammar arrives?</h2><p>How meaning begins to emerge through repeated words, context, handwriting and patient rereading.</p></article>
-<article class="media-card" style="--accent:var(--burgundy)"><span class="status planned">Lesson 3</span><h2>Why do Latin word endings matter so much?</h2><p>A first look at how endings carry information that English often leaves to word order.</p></article>
-<article class="media-card" style="--accent:var(--burgundy)"><span class="status planned">Lesson 4</span><h2>Is copying vocabulary actually helping?</h2><p>Testing whether handwriting, English equivalents and recall produce more than a neat page.</p></article>
-<article class="media-card" style="--accent:var(--burgundy)"><span class="status planned">Lesson 5</span><h2>What did I misunderstand in the first week of Latin?</h2><p>A candid review of pronunciation, vocabulary, endings and the temptation to rush ahead.</p></article>
+<article class="media-card" style="--accent:var(--gold)"><span class="status planned">Welcome</span><h2>Welcome to The Catholic Experiment</h2><p>A short introduction to the question behind the project, the Schools, the learning method and how the journal, videos and individual Experiments fit together.</p></article>
+<article class="media-card" style="--accent:var(--burgundy)"><span class="status planned">Latin · Lessons 1–5</span><h2>What happened when I began learning Latin?</h2><p>A reflective summary of the first five lessons: reading aloud, handwriting, vocabulary, the first signs of grammar, what helped, what did not and what I misunderstood.</p></article>
+<article class="media-card" style="--accent:var(--blue)"><span class="status planned">Faith · Lessons 1–4</span><h2>What changed after the first four Faith lessons?</h2><p>The first of three planned Faith Experiment videos, reflecting on what I studied, what surprised me, what needed correction and how the course affected my understanding and practice.</p></article>
 </div>
-<h2>The Faith Experiment · first lesson</h2>
-<div class="media-list">
-<article class="media-card" style="--accent:var(--blue)"><span class="status planned">Lesson 1</span><h2>What does it mean to begin with faith rather than information?</h2><p>How the first lesson distinguishes learning facts about Catholicism from entering a coherent life of belief, worship and practice.</p></article>
-</div>
+<div class="notice"><strong>Faith Experiment video rhythm:</strong> three reflective videos across the twelve-lesson course—after Lessons 1–4, Lessons 5–8 and Lessons 9–12.</div>
 </section>'''
 
 text, journal_count = re.subn(r'<section class="view" id="journal" data-section hidden>.*?</section>\s*<section class="view" id="videos"', journal + '\n<section class="view" id="videos"', text, count=1, flags=re.S)
@@ -85,8 +79,10 @@ required = [
     'Most ambitious study plans fail',
     'Serious study does not require an expensive library',
     'What I got wrong',
-    'Why begin Latin by reading aloud?',
-    'What does it mean to begin with faith rather than information?'
+    'Welcome to The Catholic Experiment',
+    'Latin · Lessons 1–5',
+    'Faith · Lessons 1–4',
+    'three reflective videos across the twelve-lesson course'
 ]
 missing = [item for item in required if item not in text]
 if missing:
