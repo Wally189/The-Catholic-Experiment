@@ -11,14 +11,24 @@
       : {name:'The Latin Experiment', school:'Sacred Languages', courseKey:'course', courseLabel:'Course', courseHref:'course.html'};
   const centralHome = 'https://wally189.github.io/The-Catholic-Experiment/';
   const formEndpoint = 'https://formspree.io/f/mgvgrgvb';
-  const items = [
-    ['home','⌂','Home','index.html#home'],
-    [config.courseKey,'▤',config.courseLabel,config.courseHref],
-    ['schedule','◫','Schedule','index.html#schedule'],
-    ['materials','▣','Materials',isFaith ? 'materials.html' : 'index.html#materials'],
-    ['certificates','✦','Certificates','index.html#certificates'],
-    ['contact','✉','Contact','index.html#contact']
-  ];
+  const items = isCentral
+    ? [
+        ['home','⌂','Home','index.html#home'],
+        ['courses','▤','Courses','index.html#courses'],
+        ['schedule','◫','Schedule','index.html#schedule'],
+        ['materials','▣','Materials','index.html#materials'],
+        ['journal','✎','Journal','index.html#journal'],
+        ['videos','▶','Videos','index.html#videos'],
+        ['contact','✉','Contact','index.html#contact']
+      ]
+    : [
+        ['home','⌂','Home','index.html#home'],
+        [config.courseKey,'▤',config.courseLabel,config.courseHref],
+        ['schedule','◫','Schedule','index.html#schedule'],
+        ['materials','▣','Materials',isFaith ? 'materials.html' : 'index.html#materials'],
+        ['certificates','✦','Certificates','index.html#certificates'],
+        ['contact','✉','Contact','index.html#contact']
+      ];
 
   function activeKey() {
     const hash = location.hash.slice(1);
