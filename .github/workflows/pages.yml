@@ -86,6 +86,9 @@ jobs:
       - name: Build central Journal and Videos pages
         run: python build/prepare_central_journal_videos.py
 
+      - name: Apply curiosity-led editorial voice
+        run: python build/prepare_editorial_voice.py
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
