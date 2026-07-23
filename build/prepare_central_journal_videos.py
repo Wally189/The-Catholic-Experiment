@@ -46,7 +46,7 @@ text, count = pattern.subn(replacement, text, count=1)
 if count != 1:
     raise RuntimeError(f'Expected one Certificates section, replaced {count}')
 
-required = ['data-view="journal"', 'data-view="videos"', 'id="journal"', 'id="videos"', 'The Faith Experiment/#certificates', 'the-latin-experiment/#certificates']
+required = ['data-view="journal"', 'data-view="videos"', 'id="journal"', 'id="videos"', 'The-Faith-Experiment/#certificates', 'the-latin-experiment/#certificates']
 missing = [item for item in required if item not in text]
 if missing:
     raise RuntimeError(f'Missing expected central navigation content: {missing}')
